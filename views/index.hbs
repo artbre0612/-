@@ -20,19 +20,19 @@
   <div class="row">
     <div class="col-md-10 col-12 mx-auto">
       <div class="row row-cols-sm-3">
-        {{#each restaurants as |restaurant|}}    
-        <a href="/restaurant/{{restaurant:id}}" class="text-secondary">
+        {{#each restaurants as |restaurantInfo|}}    
+        <a href="/restaurants/{{restaurantInfo.id}}" class="text-secondary">
           <div class="card mb-3">
-            <img class="card-img-top" src="{{restaurant.image}}" alt="Sababa 沙巴巴中東美食">
+            <img class="card-img-top" src="{{restaurantInfo.image}}" alt="">
             <div class="card-body p-3">
-              <h6 class="card-title mb-1">{{restaurant.name}}</h6>
+              <h6 class="card-title mb-1">{{restaurantInfo.name}}</h6>
 
               <div class="restaurant-category mb-1">
-                <i class="fas fa-utensils pr-2"></i> {{restaurant.category}}
+                <i class="fas fa-utensils pr-2"></i> {{restaurantInfo.category}}
               </div>
 
               <span class="badge rounded-pill bg-danger font-weight-normal">
-                {{restaurant.rating}}
+                {{restaurantInfo.rating}}
                 <i class="fas fa-star fa-xs"></i>
               </span>
             </div>
